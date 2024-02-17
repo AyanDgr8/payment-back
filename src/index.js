@@ -23,7 +23,7 @@ const gracefulShutdown = async () => {
 
   await mongoose.disconnect();
   server.close(() => {
-    console.log('💤 Server and database connections closed successfully.'.green.bold);
+    console.log('💤 Server and database connections closed successfully.'.blue.bold);
     process.exit(0);
   });
 };

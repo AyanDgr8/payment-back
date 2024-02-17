@@ -9,7 +9,7 @@ const userDetailsSchema = Joi.object({
   gender: Joi.string().valid('men', 'women', 'others').required(),
   purchaseType: Joi.string().valid('trial', 'permanent').required(),
   part: Joi.string().required(),
-  selectedDate: Joi.number().required(),
+  selectedDate: Joi.string().required(),
 });
 
 export const validateInput = (req, res, next) => {
