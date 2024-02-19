@@ -30,12 +30,12 @@ const bookformSchema = new mongoose.Schema({
     },
 
     purchaseType:{
-        type: String,
+        type: String, 
         required: [true, "Select one"]
     },
 
-    part: { 
-        type: String, 
+    selectedBodyParts: { 
+        type: [String],
         required: [true, "Choose atleast one"] 
     },
     
