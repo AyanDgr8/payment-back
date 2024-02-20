@@ -33,15 +33,19 @@ const bookformSchema = new mongoose.Schema({
         type: String, 
         required: [true, "Select one"]
     },
+    
+    selectedDate:{
+        type: Date,
+        required:[true,"Please select your date"]
+    },
 
     selectedBodyParts: { 
         type: [String],
         required: [true, "Choose atleast one"] 
     },
-    
-    selectedDate:{
-        type: Date,
-        required:[true,"Please select your date"]
+
+    coupon:{
+        type: String
     }
 
 });

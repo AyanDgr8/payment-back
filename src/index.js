@@ -39,3 +39,26 @@ connectDB()
     console.log("MongoDB connection failed !!! ".red.bold, err);
     process.exit(1);
   });
+
+
+
+// var instance = new Razorpay({
+//     key_id: 'YOUR_KEY_ID',
+//     key_secret: 'YOUR_KEY_SECRET',
+// });
+
+// const Razorpay = require('razorpay');
+
+// app.post('create/orderId', (req,res) =>{
+//   console.log("Create orderId request",req.body);
+//   var options = {
+//     amount: req.body.amount,  // amount in the smallest currency unit
+//     currency: "INR",
+//     receipt: "rcptid1"
+//   };
+//   instance.orders.create(options, function(err, order) {
+//     console.log(order);
+//     resizeBy.send({orderId : order.id})
+//   });
+
+// })
