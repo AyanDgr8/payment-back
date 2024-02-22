@@ -4,7 +4,7 @@
 import express from "express";
 import cors from "cors";
 import router from './routes/router.js';
-import { errorHandler, notFoundHandler } from './middlewares/errorHandling.js';
+// import { errorHandler, notFoundHandler } from './middlewares/errorHandling.js';
 
 const app = express();
 
@@ -14,9 +14,9 @@ app.use(cors());
 app.use("/", router);
 
 // Middleware for handling 404 errors
-app.use(notFoundHandler);
+// app.use(notFoundHandler);
 
 // Middleware for handling errors
-app.use(errorHandler);
+// app.use(errorHandler);
 
 export { app };

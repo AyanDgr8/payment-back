@@ -2,7 +2,7 @@
 
 import { Router } from 'express';
 import { UserDetailsBookform } from '../models/bodyPart.js';
-import { validateInput } from '../middlewares/validationMiddleware.js';
+// import { validateInput } from '../middlewares/validationMiddleware.js';
 
 
 const router = Router();
@@ -22,7 +22,7 @@ const saveUserDetails = async (req, res, UserDetailsModel) => {
 
 
 // Endpoint for user details from bookform
-router.post('/user-details-bookform', validateInput, async (req, res) => {
+router.post('/user-details-bookform', async (req, res) => {
   await saveUserDetails(req, res, UserDetailsBookform);
 });
 
