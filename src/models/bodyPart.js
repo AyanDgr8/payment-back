@@ -45,7 +45,9 @@ const bookformSchema = new mongoose.Schema({
     },
 
     coupon:{
-        type: String
+        type: String,
+        default:'',
+        required:false
     }
 
 });
