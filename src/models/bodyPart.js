@@ -13,14 +13,14 @@ const bookformSchema = new mongoose.Schema({
     phoneNumber: { 
         type: Number, 
         required: [true, "Phone number is required"], 
-        unique: true,
+        // unique: true,
         match: /^[0-9]{10}$/ 
     },
 
     email: { 
         type: String, 
         required: [true, "Mention your Email address"], 
-        unique: true,
+        // unique: true,
         match:/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/
     },
 
@@ -48,6 +48,10 @@ const bookformSchema = new mongoose.Schema({
         type: String,
         default:'',
         required:false
+    },
+    totalPrice: {
+        type: Number,  
+        required: true
     }
 
 });

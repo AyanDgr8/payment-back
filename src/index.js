@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import connectDB from "./db/index.js";
 import { app } from './app.js';
 import 'colors';
+// import Razorpay from "razorpay";
 import mongoose from "mongoose";
 
 dotenv.config({
@@ -39,6 +40,12 @@ connectDB()
     console.log("MongoDB connection failed !!! ".red.bold, err);
     process.exit(1);
   });
+
+
+  // export const instance = new Razorpay({
+  //   key_id: process.env.RAZORPAY_API_KEY,
+  //   key_secret: process.env.RAZORPAY_APT_SECRET,
+  // });
 
 
 
