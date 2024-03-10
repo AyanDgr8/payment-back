@@ -6,14 +6,14 @@ import dotenv from "dotenv";
 import connectDB from "./db/index.js";
 import { app } from './app.js';
 import 'colors';
-// import Razorpay from "razorpay";
+import Razorpay from "razorpay";
 import mongoose from "mongoose";
 
 dotenv.config({
   path: './.env'
 });
 
-const server = app.listen(process.env.PORT || 8000, () => {
+const server = app.listen(process.env.PORT, () => {
   console.log(`⚙️  Server is running at port : ${process.env.PORT}`.cyan.bold);
 });
 
@@ -42,19 +42,11 @@ connectDB()
   });
 
 
-  // export const instance = new Razorpay({
-  //   key_id: process.env.RAZORPAY_API_KEY,
-  //   key_secret: process.env.RAZORPAY_APT_SECRET,
-  // });
+  export const instance = new Razorpay({
+    key_id: process.env.RAZORPAY_API_KEY,
+    key_secret: process.env.RAZORPAY_APT_SECRET,
+  });
 
-
-
-// var instance = new Razorpay({
-//     key_id: 'YOUR_KEY_ID',
-//     key_secret: 'YOUR_KEY_SECRET',
-// });
-
-// const Razorpay = require('razorpay');
 
 // app.post('create/orderId', (req,res) =>{
 //   console.log("Create orderId request",req.body);

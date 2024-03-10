@@ -1,4 +1,4 @@
 // src/constants.js
 
 
-export const DB_NAME = "snyllopayment" 
+export const DB_NAME = "snyllopayment" ;
